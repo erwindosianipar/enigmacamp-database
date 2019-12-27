@@ -28,25 +28,25 @@ SELECT * FROM karyawan;
 ```
 SELECT id, nama, alamat FROM karyawan WHERE alamat='Surabaya';
 ```
-![Menampilkan data](/images/soal01-01.png)
+![Menampilkan data](images/soal01-01.png)
 
 ## 2. Tampilkan nama yang gajinya diatas 15000
 ```
 SELECT nama FROM karyawan WHERE gaji > 15000;
 ```
-![Menampilkan data](/images/soal01-02.png)
+![Menampilkan data](images/soal01-02.png)
 
 ## 3. Tampilkan nama yang berawalan huruf F
 ```
 SELECT nama FROM karyawan WHERE nama LIKE 'f%';
 ```
-![Menampilkan data](/images/soal01-03.png)
+![Menampilkan data](images/soal01-03.png)
 
 ## 4. Tampilkan nama yang berakhiran f
 ```
 SELECT nama FROM karyawan WHERE nama LIKE '%f';
 ```
-![Menampilkan data](/images/soal01-04.png)
+![Menampilkan data](images/soal01-04.png)
 
 # Soal 02
 
@@ -82,7 +82,7 @@ INSERT INTO departemen VALUES
 (1001, 'Teknikal', 'Jakarta'),
 (1002, 'Manajemen', 'Jakarta');
 ```
-![Menambahkan data](/images/soal02-01a.png)
+![Menambahkan data](images/soal02-01a.png)
 
 **Selanjutnya menambah data Pegawai**
 ```
@@ -93,26 +93,26 @@ INSERT INTO pegawai VALUES
 (103, 'Vani', 'Jakarta', 1002),
 (104, 'Dian', 'Jakarta', 1000);
 ```
-![Menambahkan data](/images/soal02-01b.png)
+![Menambahkan data](images/soal02-01b.png)
 
 
 ## 2. Mengedit data di tabel Departemen
 ```
 UPDATE departemen SET Nama_Dept = 'Teknikal Support', Lokasi = 'Depok' WHERE ID_Dept = '1001'
 ```
-![Mengupdate data](/images/soal02-02.png)
+![Mengupdate data](images/soal02-02.png)
 
 ## 3. Delete data di tabel Pegawai yang beralamat di Surabaya
 ```
 DELETE FROM pegawai WHERE Alamat = 'Surabaya';
 ```
-![Delete data](/images/soal02-03.png)
+![Delete data](images/soal02-03.png)
 
 ## 4. Tampilkan data Nama dan alamat pegawai dan nama departemen yang berdomisili di jakarta
 ```
 SELECT p.Nama, p.Alamat, d.Nama_Dept AS 'Departemen' FROM pegawai p INNER JOIN departemen d WHERE p.ID_Dept = d.ID_Dept AND p.Alamat = 'Jakarta'; 
 ```
-![Menampilkan data](/images/soal02-04.png)
+![Menampilkan data](images/soal02-04.png)
 
 
 # Soal 03
@@ -158,7 +158,7 @@ INSERT INTO Mahasiswa VALUES
 (1003, 'Bianca', 'Jakarta Utara', 'Badminton'),
 (1004, 'Refa', 'Jakarta Pusat', 'Basket');
 ```
-![Menampilkan data](/images/soal03-01a.png)
+![Menampilkan data](images/soal03-01a.png)
 
 **Menambah data tabel Mata Kuliah**
 ```
@@ -167,7 +167,7 @@ INSERT INTO MTKuliah VALUES
 ('VT001', 'Database', 4),
 ('VT002', 'UI/UX', 2);
 ```
-![Menampilkan data](/images/soal03-01b.png)
+![Menampilkan data](images/soal03-01b.png)
 
 **Menambah data tabel Nilai Mahasiswa**
 ```
@@ -178,13 +178,13 @@ INSERT INTO NilaiMHS VALUES
 (1003, 'VT000', 70), (1003, 'VT001', 80), (1003, 'VT002', 100),
 (1004, 'VT000', 70), (1004, 'VT001', 80), (1004, 'VT002', 70);
 ```
-![Menampilkan data](/images/soal03-01c.png)
+![Menampilkan data](images/soal03-01c.png)
 
 # 2. Mengedit data di tabel NilaiMHS
 ```
 UPDATE NilaiMHS SET Nilai = 90 WHERE Kode_MK = 'VT000' AND NRP = 1004
 ```
-![Menampilkan data](/images/soal03-02.png)
+![Menampilkan data](images/soal03-02.png)
 
 # 3. Delete data di tabel MtKuliah yang berkode VT001
 
@@ -198,11 +198,11 @@ DELETE FROM NilaiMHS WHERE Kode_MK = 'VT001';
 ```
 DELETE FROM MTKuliah WHERE Kode_MK = 'VT001';
 ```
-![Menampilkan data](/images/soal03-03.png)
+![Menampilkan data](images/soal03-03.png)
 
 
 # Tampilkan data Nama dan alamat mahasiwa, nama mata kuliah, SKS dan nilainya.
 ```
 SELECT m.Nama, m.Alamat, mk.Nama_MK AS 'Mata Kuliah', mk.SKS, n.Nilai FROM Mahasiswa m JOIN MtKuliah mk JOIN NilaiMHS n;
 ```
-![Menampilkan data](/images/soal03-04.png)
+![Menampilkan data](images/soal03-04.png)
